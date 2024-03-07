@@ -1,0 +1,35 @@
+.background-image {
+  background-color:#ff3a3ae0;
+  border: 3px solid black;
+
+}
+.nav-link span {
+  margin-left: 3px;
+  color: black;
+  background-color:white;
+  padding: 0.1rem 0.45rem;
+  border-radius: 100rem;
+  font-size: 0.9rem;
+}
+.menu {
+  /* margin-left: 700px; */
+  width: 30%;
+}
+li a{
+  color: whitesmoke;
+}
+.dropdown-menu{
+  background-color: #e72929e0;
+  
+}
+.dropdown-item{
+
+  transition: transform 2s ease-in-out;
+  
+}
+.dropdown-item:hover{
+ background: transparent;
+ 
+ transform: scale(1.2);
+}
+
