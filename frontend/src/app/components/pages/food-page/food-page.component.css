@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  padding-top: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin:auto;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+.container:hover {
+  background-color: #fdfdfd;
+  transform: scale(1.04);
+}
+
+.image-container,
+.details {
+  flex: 1;
+  padding: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.details {
+  margin-top: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e72929;
+}
+
+.favorite {
+  font-size: 24px;
+  color: red;
+}
+
+.rating {
+  margin-top: 10px;
+}
+
+.origins,
+.tags,
+.cook-time,
+.price {
+  margin-top: 10px;
+}
+
+.origins,
+.tags,
+.cook-time,
+.price {
+  margin-top: 10px;
+}
+.price{
+  font-size: 1.1rem;
+  margin: 1rem 1rem 1rem 0;
+  color: black;
+}
+
+.price::before{
+  content: "Price: ";
+  color: rgb(121, 121, 121);
+}
+
+.tags .badge {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #dfd9d954;
+  color: rgb(247, 10, 10);
+  border-radius: 20px;
+  margin-right: 5px;
+  cursor: pointer;;
+}
+
+button {
+  font-weight: bolder;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .image-container,
+  .details {
+    flex: 1;
+  }
+
+  .details {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+}
+.button {
+  margin: 0.5rem;
+  background-color: rgb(248, 6, 6);
+  color: #ffffff;
+  transition: transform 0.3s ease-in-out;
+}
+.button:hover {
+  background-color: #e72929;
+  color: #fff;
+  transform: scale(1.04);
+}

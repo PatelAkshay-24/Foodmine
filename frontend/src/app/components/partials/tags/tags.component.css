@@ -12,6 +12,7 @@ div {
     font-weight: 600;
     color: red;
     text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px;
   }
   
  div a.active {

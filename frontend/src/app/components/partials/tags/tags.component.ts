@@ -10,6 +10,7 @@ import { Tag } from 'src/app/shered/models/tag';
 })
 export class TagsComponent {
   tags?:Tag[];
+  
   constructor(foodservice:FoodsrviceService){
     this.tags = foodservice.getAllTag()
   }

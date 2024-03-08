@@ -9,7 +9,7 @@ div{
   input{
    
     border-radius: 10rem 0 0 10rem;
-    
+    border: none;
     height: 3rem;
     width: 20rem;
     background-color: #f1f1f1;
@@ -17,6 +17,7 @@ div{
     font-size: 1.1rem;
     font-weight: 500;
     outline: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px;
   }
   
   div button{
@@ -25,11 +26,12 @@ div{
     width: 5rem;
     font-size: 1rem;
     border-radius: 0 10rem 10rem 0;
-    border: 3px solid black;
+    border: none;
     background-color: #e72929;
     color: white;
     opacity: 0.8;
     outline: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px;
   }
   
   div button:hover{

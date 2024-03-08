@@ -1,6 +1,14 @@
 *{
     text-decoration: double ;
 }
+.home{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.home:hover{
+  transform: scale(1.05);
+}
 ul{
     display: flex;
     justify-content: center;
