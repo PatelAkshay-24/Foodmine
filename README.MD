@@ -56,4 +56,15 @@
         4.add title component in cart html
         5.Add Html
         6.Add Css
+10.Not Found Page
+    1.Generate  component
+        1.Add Ts
+        2.Add Html
+        3.Add Css
+    2.Add @ Pages
+        1.Home page
+        2.Food Page
+        3.Cart Page
+
+        
         
