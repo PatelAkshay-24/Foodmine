@@ -9,11 +9,11 @@
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "./Foodmine/backend/src/index.ts"
+            "dest": "../src/index.ts"
         },
         {
             "src": "/",
-            "dest": "./Foodmine/backend/src/index.ts"
+            "dest": "../src/index.ts"
         }
     ]
 }
