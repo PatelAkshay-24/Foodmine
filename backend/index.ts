@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import { sample_foods, sample_tags } from './data'
+import { sample_foods, sample_tags } from '../backend/src/data'
 
 const app = express();
 
