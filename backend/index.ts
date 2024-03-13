@@ -8,10 +8,9 @@ const app = express();
 
 app.use(cors({
     credentials:true,
-    origin:['https://foodmine-seven.vercel.app/']
+    origin:['https://foodmine-seven.vercel.app']
 
 }))
-
 
 //get api for All foods
 app.get('/api/foods',(req,res)=>{
