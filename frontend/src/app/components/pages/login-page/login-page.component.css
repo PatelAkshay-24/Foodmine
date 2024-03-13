@@ -127,7 +127,7 @@ button:hover {
     }
 
     .card-image img {
-        max-width: 100%; /* Adjust to maintain aspect ratio */
+        width: 100%; /* Adjust to maintain aspect ratio */
         height: 200px; /* Fixed height or auto for automatic adjustment */
     }
 }
