@@ -76,7 +76,7 @@ body, html {
 }
 
 .card-image img {
-    width: 100%; /* Adjust based on your image's aspect ratio */
+    max-width:100%; /* Adjust based on your image's aspect ratio */
     height: 100%;
 }
 
@@ -127,7 +127,7 @@ button:hover {
     }
 
     .card-image img {
-        width: auto; /* Adjust to maintain aspect ratio */
+        max-width: 100%; /* Adjust to maintain aspect ratio */
         height: 200px; /* Fixed height or auto for automatic adjustment */
     }
 }
