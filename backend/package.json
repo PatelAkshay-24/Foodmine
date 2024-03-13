@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start":"cd src && nodemon index.ts",
+    "start": "cd src && nodemon index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -21,4 +21,5 @@
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2"
   }
+ 
 }
