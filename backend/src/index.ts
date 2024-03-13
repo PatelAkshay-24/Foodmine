@@ -8,7 +8,7 @@ const app = express();
 
 app.use(cors({
     credentials:true,
-    origin:["https://foodmine-seven.vercel.app/"]
+    origin:["http://localhost:4200"]
 
 }))
 
@@ -45,9 +45,18 @@ app.get('/api/foods/:foodId',(req,res)=>{
     res.send(foods)
 })
 
+app.get('/',(req,res)=>{
+   res.send("hello");
+})
+
 
 const port = 5000;
 app.listen(port,()=>{
     console.log("welcome server is run on http:/localhost:",+port);
     
 })
+
+
+
+
+module.exports = app;
