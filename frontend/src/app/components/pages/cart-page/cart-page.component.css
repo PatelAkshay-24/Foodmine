@@ -1,6 +1,25 @@
 *{
   text-decoration: none;
 }
+h1 {
+  font-size: 2rem; /* Adjust the font size as needed */
+  color: hsla(0, 100%, 58%, 0.76); /* Text color */
+  text-align: left; /* Center the text */
+  margin-bottom: 20px; /* Add some bottom margin for spacing */
+  /* Additional styling */
+  text-transform: uppercase; /* Convert text to uppercase */
+  font-weight: bold; /* Make text bold */
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem; /* Decrease font size for smaller screens */
+  }
+}
+
 
 ul{
   border: 0.5px solid red;

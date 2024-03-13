@@ -17,7 +17,8 @@
 }
 li a{
   color: whitesmoke;
-}
+  font-size: large;
+} 
 .dropdown-menu{
   background-color: #e72929e0;
   

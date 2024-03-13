@@ -1,7 +1,7 @@
 <app-not-found
 [visible]="!food.id"
 notFoundMessage="food is not available"
-resetLinkText="Back To Homepage"
+resetLinkText="/cart"
 ></app-not-found>
 
 <body class="background-image">
@@ -27,7 +27,7 @@ resetLinkText="Back To Homepage"
               [readonly]="true"
           >
           </star-rating>
-      </div>
+        </div>
 
       <div class="origins">
           <span *ngFor="let origin of food.origins">

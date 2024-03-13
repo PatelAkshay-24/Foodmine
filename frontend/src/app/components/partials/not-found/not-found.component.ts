@@ -12,7 +12,7 @@ export class NotFoundComponent   {
   @Input()
   notFoundMessage = "Nothing Found!"
   @Input()
-  resetLinkText ='Reset';
+  resetLinkText ='Back to Home';
   @Input()
   resetLinkRoute = '/'
 

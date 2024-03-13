@@ -65,6 +65,34 @@
         1.Home page
         2.Food Page
         3.Cart Page
-
+11.Backend
+    1.Create backend Folder
+    2.Npm InIt
+    3.Npm Install Typescript
+    4.Create tsconfig.json
+    5.crate .gitignore
+    5.copy data.ts to backend/src
+    7.npm install exxpress cors
+    8.Create Server.ts
+        1.Install @types
+        2.Add Apis
+    9.Npm install nodemon ts-node --save-dev
+    10.Add urs.ts To Frontend
+    11.Add http Client Module
+    12.Update Food Services
+12.login page
+        1.generate component
+            1.Add Routes
+            2.Add ts
+            3.Add Html
+                1.Imort Reactive Forms Modules
+            4.Add Css
+        2.Add Login Api
+            1.Use Json
+            2.Add Jsonwebtoken
+            3.Test Using Postman
+        3.Part 2...
         
+
+
         
