@@ -9,7 +9,7 @@
   "routes": [
     {
       "src": "/backend/(.*)",
-      "dest": "/foodmine/backend/src/index.ts"
+      "dest": "foodmine/backend/src/index.ts"
     }
   ]
 }
