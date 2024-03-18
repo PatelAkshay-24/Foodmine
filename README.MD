@@ -88,11 +88,34 @@
                 1.Imort Reactive Forms Modules
             4.Add Css
         2.Add Login Api
-            1.Use Json
-            2.Add Jsonwebtoken
+            1.Use Json Jsonwebtoken
+             
+            2.Add   npm install Jsonwebtoken
             3.Test Using Postman
-        3.Part 2...
-        
+        3.generate user Service
+            1.Generate user Model
+            2.Add User Subject
+            3.Add Ngx-toastr
+                1.import module
+                2.Import BrowserAnimation Module
+                3.Add styles in angular json
+            4.Add to Header
+        1.Add local Storage Methods
+        2.Add Log Out Method
+            1.Add to Header
+13.connect Login API To Mongobd Atlas
+    1.Moving APIS Into routers
+    2.Create Mongobdb Atlas
+    3.Create .env file
+    4.Install
+        1.mongoose 
+        2.dotenv
+        3.bcryptjs
+        4.jsonwebtoken
+        5.express-async-handler
+    5.connect To Mongodb atlas
+        create models folder inside thi folder create Once InterFase And Create Schema
+    6.use Mongodb instead of data.ts in Apis
 
 
         

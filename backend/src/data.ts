@@ -1,4 +1,5 @@
 
+//sample Food
 export const sample_foods: any[] = [
   {
     id:'1',
@@ -90,6 +91,7 @@ export const sample_foods: any[] = [
   },
 ]
 
+//sample Tags
 export const sample_tags:any[] = [
   { name: 'All', count: 6 },
   { name: 'FastFood', count: 4 },
@@ -100,3 +102,21 @@ export const sample_tags:any[] = [
   { name: 'Fry', count: 1 },
   { name: 'Soup', count: 1 },
 ]
+
+//Sample Users for login
+export const sample_users: any[] = [
+  {
+    name: 'Patel Akshay',
+    email: 'akkipatel@gmail.com',
+    password: '1234',
+    address: 'Txass',
+    isAdmin: true,
+  },
+  {
+    name: 'Patel Priyanshu',
+    email: 'priyanshu@gmail.com',
+    password: '1234',
+    address: 'Shicago',
+    isAdmin: false,
+  },
+];

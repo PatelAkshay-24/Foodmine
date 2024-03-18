@@ -1,34 +1,51 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+import { UserserviceService } from 'src/app/services/userservice.service';
 
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.css']
+  styleUrls: ['./login-page.component.css'],
 })
+
 export class LoginPageComponent {
-
-  loginForm!:FormGroup;
+  loginForm!: FormGroup;
   isSubmitted = false;
-  constructor(private formBuilder:FormBuilder){}
+  returnUrl = '';
+  constructor(
+    private formBuilder: FormBuilder,
+    private userservice: UserserviceService,
+    private activatedrouter: ActivatedRoute,
+    private router: Router
+  ) {}
 
-  ngOnInit():void{
+
+  ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      email:['',[Validators.required,Validators.email]],
-      password:['',[Validators.required]]
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]],
     });
     //loginForm.Controls.email
+
+    this.returnUrl = this.activatedrouter.snapshot.queryParams.returnUrl
   }
 
-  get fc(){
+  //Reactive Forms Control
+  get fc() {
     return this.loginForm.controls;
   }
 
-  submite(){
-    this.isSubmitted = true
-    if(this.loginForm.invalid) return;
+  //Submit Funcation  Inside of Form
+  submit() {
+    this.isSubmitted = true;
+    if (this.loginForm.invalid) return;
 
-    alert(`email: ${this.fc.email.value},
-    password: ${this.fc.password.value}`)
+    this.userservice.login({
+      email: this.fc.email.value,
+      password: this.fc.password.value
+    }).subscribe(() =>{
+      this.router.navigateByUrl(this.returnUrl);
+    });
   }
 }
