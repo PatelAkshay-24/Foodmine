@@ -2,21 +2,21 @@ import Router from "express"
 import { sample_foods, sample_users } from '../data';
 import jwt from "jsonwebtoken"
 import asyncHandler from "express-async-handler";
-import { UserModel } from "../models/user.model";
+// import { UserModel } from "../models/user.model";
 const router = Router()
 
 
 
-router.get('/seed',asyncHandler(
-    async (req,res)=>{
-        const userCount = await UserModel.countDocuments()
-        if(userCount> 0){
-            res.send('send is already done')
-            return;
-        }
-    await UserModel.create(sample_users)
-    res.send("seed Is Done!")
-}))
+// router.get('/seed',asyncHandler(
+//     async (req,res)=>{
+//         const userCount = await UserModel.countDocuments()
+//         if(userCount> 0){
+//             res.send('send is already done')
+//             return;
+//         }
+//     await UserModel.create(sample_users)
+//     res.send("seed Is Done!")
+// }))
 
 //Login Api
 router.post('/login',(req,res)=>{

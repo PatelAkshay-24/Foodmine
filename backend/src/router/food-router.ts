@@ -1,20 +1,20 @@
 import { Router } from "express"
 import { sample_foods, sample_tags } from "../data";
 import asynceHanler from 'express-async-handler'
-import { FoodModel } from "../models/food.model";
+// import { FoodModel } from "../models/food.model";
 
 const router = Router();
 
-router.get('/seed',asynceHanler(
-    async (req,res)=>{
-        const foodCount = await FoodModel.countDocuments()
-        if(foodCount> 0){
-            res.send('send is already done')
-            return;
-        }
-    await FoodModel.create(sample_foods)
-    res.send("seed Is Done!")
-}))
+// router.get('/seed',asynceHanler(
+//     async (req,res)=>{
+//         const foodCount = await FoodModel.countDocuments()
+//         if(foodCount> 0){
+//             res.send('send is already done')
+//             return;
+//         }
+//     await FoodModel.create(sample_foods)
+//     res.send("seed Is Done!")
+// }))
 
 //get api for All foods
 router.get('/',(req,res)=>{
