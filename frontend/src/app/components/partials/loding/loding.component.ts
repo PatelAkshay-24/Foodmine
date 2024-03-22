@@ -14,6 +14,6 @@ export class LodingComponent {
       this.isLoading = isLoading;
     });
 
-    loadingservice.showLoading()
+    // loadingservice.showLoading()
   }
 }

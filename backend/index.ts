@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 dotenv.config();
-    
+
 import express from 'express'
 import cors from 'cors'
 import foodRouter from './src/router/food-router'
@@ -15,15 +15,13 @@ app.use(express.json());
 app.use(cors({
     credentials:true,
     origin:["https://foodmine-seven.vercel.app"]
-
 }))
 
 //foods Router couple of Api    
-app.use('/api/foods' , foodRouter)
+app.use('/api/foods', foodRouter)
 
 //user Router Couple of Api
 app.use('/api/users',userRouter)
-
 
 // Backend is Direct Redirect to '/'
 app.get('/',(req,res)=>{
@@ -34,5 +32,4 @@ app.get('/',(req,res)=>{
 const port = 5000;
 app.listen(port,()=>{
     console.log("welcome server is run on http:/localhost:",+port);
-    
 })
