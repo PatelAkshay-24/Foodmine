@@ -25,10 +25,10 @@ app.use('/api/foods' , foodRouter)
 app.use('/api/users',userRouter)
 
 
-//Backend is Direct Redirect to '/'
-// app.get('/',(req,res)=>{
-//    res.send("hello");
-// })
+Backend is Direct Redirect to '/'
+app.get('/',(req,res)=>{
+   res.send("hello");
+})
 
 
 const port = 5000;
