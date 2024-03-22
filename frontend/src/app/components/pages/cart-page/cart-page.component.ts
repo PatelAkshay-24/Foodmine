@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CartServiceService } from 'src/app/services/cart-service.service';
-import { Cart } from 'src/app/shered/models/cart';
-import { CartItem } from 'src/app/shered/models/cartitem';
+import { Cart } from 'src/app/shared/models/cart';
+import { CartItem } from 'src/app/shared/models/cartitem';
 
 @Component({
   selector: 'app-cart-page',

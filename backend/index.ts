@@ -1,12 +1,12 @@
-// import dotenv from 'dotenv';
-// dotenv.config();
+import dotenv from 'dotenv';
+dotenv.config();
     
 import express from 'express'
 import cors from 'cors'
 import foodRouter from './src/router/food-router'
 import userRouter from './src/router/user-router'
-// import {dbConnect} from './src/configs/database.config'
-// dbConnect()
+import {dbConnect} from './src/configs/database.config'
+dbConnect()
 
 const app = express();
 app.use(express.json());
@@ -14,7 +14,7 @@ app.use(express.json());
 //connect frontend 
 app.use(cors({
     credentials:true,
-    origin:["https://foodmine-seven.vercel.app"]
+    origin:["http://localhost:4200"]
 
 }))
 

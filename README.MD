@@ -116,6 +116,14 @@
     5.connect To Mongodb atlas
         create models folder inside thi folder create Once InterFase And Create Schema
     6.use Mongodb instead of data.ts in Apis
-
-
+14.Register Page
+    1.Add Register Api
+    2.Add Register Service Mathod
+    3.Add Register Link
+    4.Add Register Componetnt
+15.Loding
+    1.Add Image
+    2.Add Component
+    3.Add Service
+    4.Add Interceptor
         

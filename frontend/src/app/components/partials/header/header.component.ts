@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CartServiceService } from 'src/app/services/cart-service.service';
 import { UserserviceService } from 'src/app/services/userservice.service';
-import { User } from 'src/app/shered/models/user';
+import { User } from 'src/app/shared/models/user';
 
 @Component({
   selector: 'app-header',
@@ -31,6 +31,6 @@ export class HeaderComponent {
 
   //auth for dropDown
   get isAuth() {
-    return this.user.token;
+    return this.user.id;
   }
 }

@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
-import { User } from '../shered/models/user';
-import { IUserLogin } from '../shered/interfaces/IUserLogin';
+import { User } from '../shared/models/user';
+import { IUserLogin } from '../shared/interfaces/IUserLogin';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { USER_LOGIN_URL } from '../shered/constants/url';
+import { USER_LOGIN_URL, USER_REGISTER_URL } from '../shared/constants/url';
 import { ToastrService } from 'ngx-toastr';
+import { IUserRegister } from '../shared/interfaces/IUserRegister';
 
 
 //userkey define for localstorage
@@ -42,6 +43,25 @@ export class UserserviceService {
         },
       })
     );
+  }
+
+  //register Services
+  register(UserRegister:IUserRegister):Observable<User>{
+    return this.http.post<User>(USER_REGISTER_URL,UserRegister).pipe(
+      tap({
+        next:(user) =>{
+          this.setUserToLocalStorage(user);
+          this.userSubject.next(user);
+          this.toastrService.success(
+            `welcome Foodmine Galary  ${user.name}`,
+            'Registeration successfull'
+          )
+        },
+        error:(errorResponse) =>{
+          this.toastrService.error(errorResponse.error,'Register Faild')
+        }
+      })
+    )
   }
 
   //Logout service

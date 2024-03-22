@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule,HTTP_INTERCEPTORS} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/partials/header/header.component';
@@ -15,10 +15,19 @@ import { NotFoundComponent } from './components/partials/not-found/not-found.com
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { RegisterPageComponent } from './components/pages/register-page/register-page.component'
+import { TextInputComponent } from './components/partials/text-input/text-input.component';
+import {InputValidationComponent} from './components/partials/input-validation/input-validation.component';
+import {InputContainerComponent} from './components/partials/input-container/input-container.component';
+import { LodingComponent } from './components/partials/loding/loding.component';
+import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 
 @NgModule({
   declarations: [
+    TextInputComponent,
+    InputValidationComponent,
+    InputContainerComponent,
     AppComponent,
     HeaderComponent,
     HomeComponent,
@@ -28,7 +37,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
     CartPageComponent,
     TitleComponent,
     NotFoundComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    RegisterPageComponent,
+    LodingComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +54,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
     }),
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,useClass:LoadingInterceptor,multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

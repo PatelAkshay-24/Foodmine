@@ -83,7 +83,7 @@ body, html {
 .login-form {
     padding: 20px;
     display: flex;
-    color: #f32121;
+    color: #000000;
     text-align: center;
     flex-direction: column;
     justify-content: center;
@@ -146,6 +146,10 @@ button:hover {
     border: 1px solid #f5c6cb; 
     border-radius: 4px;
     margin-bottom: 5px; 
+  }
+
+  .registerroute{
+    color: rgb(255, 0, 0);
   }
   
 

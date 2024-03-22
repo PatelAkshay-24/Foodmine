@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Cart } from '../shered/models/cart';
+import { Cart } from '../shared/models/cart';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Food } from '../shered/models/foodlist';
-import { CartItem } from '../shered/models/cartitem';
+import { Food } from '../shared/models/foodlist';
+import { CartItem } from '../shared/models/cartitem';
 
 @Injectable({
   providedIn: 'root',

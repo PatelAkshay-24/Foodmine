@@ -30,10 +30,10 @@
             <a class="nav-link " href="#">About</a>
           </li>
 
-          <li class="nav-item" *ngIf="!user.token">
+          <li class="nav-item" *ngIf="!user.id">
             <a
               class="nav-link "
-              routerLink="/Login-page"
+              routerLink="/login-page"
               tabindex="-1"
               aria-disabled="true"
               >Login</a
@@ -43,7 +43,6 @@
           <li *ngIf="isAuth" class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle "
-
               id="navbarDropdownMenuLink"
               role="button"
               data-bs-toggle="dropdown"
@@ -63,7 +62,7 @@
               routerLink="/cart-page"
               tabindex="-1"
               aria-disabled="true"
-              >Cart<span>3</span></a
+              >Cart<span>{{cartQyuantity}}</span></a
             >
           </li>
         </ul>

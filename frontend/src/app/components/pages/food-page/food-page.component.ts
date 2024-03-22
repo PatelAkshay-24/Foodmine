@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CartServiceService } from 'src/app/services/cart-service.service';
 import { FoodsrviceService } from 'src/app/services/foodsrvice.service';
-import { Food } from 'src/app/shered/models/foodlist';
+import { Food } from 'src/app/shared/models/foodlist';
 
 @Component({
   selector: 'app-food-page',

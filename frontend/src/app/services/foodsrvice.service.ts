@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Food } from '../shered/models/foodlist';
+import { Food } from '../shared/models/foodlist';
 import { sample_foods, sample_tags } from '../data';
-import { Tag } from '../shered/models/tag';
+import { Tag } from '../shared/models/tag';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {
@@ -10,7 +10,7 @@ import {
   FOOD_BY_TAG_URL,
   FOOD_URL,
   Food_TAG_URL,
-} from '../shered/constants/url';
+} from '../shared/constants/url';
 
 @Injectable({
   providedIn: 'root',

@@ -1,5 +1,5 @@
-import { Food } from "./shered/models/foodlist";
-import { Tag } from "./shered/models/tag";
+import { Food } from "./shared/models/foodlist";
+import { Tag } from "./shared/models/tag";
 export const sample_foods: Food[] = [
   {
     id:'1',
