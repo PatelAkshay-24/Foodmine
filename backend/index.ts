@@ -14,7 +14,7 @@ app.use(express.json());
 //connect frontend 
 app.use(cors({
     credentials:true,
-    origin:["http://localhost:4200"]
+    origin:["https://foodmine-seven.vercel.app"]
 
 }))
 
