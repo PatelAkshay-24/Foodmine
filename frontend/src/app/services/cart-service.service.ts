@@ -48,6 +48,11 @@ export class CartServiceService {
     
   }
 
+  //get cart for Check Out Page
+  getCart():Cart{
+    return this.cartSubject.value
+  }
+
   //set cart to Local Storage
   private setCartToLocalStorage(): void {
     this.cart.totalPrice = this.cart.items.reduce(

@@ -126,4 +126,49 @@
     2.Add Component
     3.Add Service
     4.Add Interceptor
-        
+        in app module inside of provider add http interseptor for loading interseptor
+16 CheckOut Page
+    1.Create Order Model
+    2.Create Check Out Componnets
+        1.Add Router
+    3.Add User To UserService
+    4.Add Cart To CartService
+    5.Create Order Items List Componnt
+    6.Adding Map to CheckOut Page
+        1.Add Leaflet npm package
+            1.Add @types/leaflet
+            2.Add Css to angular.json
+        2.Add AddressLatLng to Order Model
+        3.Create Map component
+            1.Add to checkout page
+            2.Add TS
+                1.Change app-map selector to map
+            3.Add Html
+            4.Add CSS
+        4.Add Auth Guard
+    7.Save Order
+        1.Add Order Model
+        2.Add Order Status Enum
+        3.Add Auth Middleware
+        4.Add Order Router
+            1.Add Create Api
+        5.Add Order Urls To urls.ts
+        6.Add Order Service
+            1.Add Create Method
+18.payment Page
+    1.Generate Component
+    2.Add 'getOrderForCurrentOrder API
+    3.Add Order Service Methods
+    4.connect component to service
+    5.make the map component readonly   
+
+19.Adding Paypal
+
+    1.Generate Component
+        1.Add to payment page
+    2.Get Paypal client Id
+    3.Add Paypal JS to index.html
+    4.Set up Paypal button
+    5.Add Pay api to order router
+    6.Get Paypal sandbox account
+                           

@@ -5,7 +5,7 @@ import { LodingserviceService } from 'src/app/services/lodingservice.service';
   selector: 'app-loding',
   templateUrl: './loding.component.html',
   styleUrls: ['./loding.component.css'],
-})
+})  
 export class LodingComponent {
   isLoading!: boolean;
 

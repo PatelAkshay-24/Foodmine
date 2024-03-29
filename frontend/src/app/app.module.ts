@@ -22,6 +22,12 @@ import {InputValidationComponent} from './components/partials/input-validation/i
 import {InputContainerComponent} from './components/partials/input-container/input-container.component';
 import { LodingComponent } from './components/partials/loding/loding.component';
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
+import { CheckOutPageComponent } from './components/pages/check-out-page/check-out-page.component';
+import { OrderItemsListComponent } from './components/partials/order-items-list/order-items-list.component';
+import { MapComponent } from './components/partials/map/map.component';
+import { AuthInterceptor } from './auth/auth.interceptor';
+import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
+import { PaypalButtonComponent } from './components/partials/paypal-button/paypal-button.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +46,11 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
     LoginPageComponent,
     RegisterPageComponent,
     LodingComponent,
+    CheckOutPageComponent,
+    OrderItemsListComponent,
+    MapComponent,
+    PaymentPageComponent,
+    PaypalButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +66,10 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
     BrowserAnimationsModule,
   ],
   providers: [
+    {
+      provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true,
+     
+    },
     {
       provide:HTTP_INTERCEPTORS,useClass:LoadingInterceptor,multi:true
     }

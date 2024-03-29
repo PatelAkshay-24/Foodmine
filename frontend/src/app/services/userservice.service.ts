@@ -20,11 +20,18 @@ export class UserserviceService {
     this.getUserFromLocalStorage()
   );
   public UserObservable: Observable<User>;
+  isLoggedIn: any;
 
   constructor(private http: HttpClient, private toastrService: ToastrService) {
     this.UserObservable = this.userSubject.asObservable();
   }
 
+  //get currentUser For CheckOut Page
+  public get currentUser():User{
+    return this.userSubject.value;
+  }
+
+  
   //Login service
   login(userLogin: IUserLogin): Observable<User> {
     return this.http.post<User>(USER_LOGIN_URL, userLogin).pipe(
