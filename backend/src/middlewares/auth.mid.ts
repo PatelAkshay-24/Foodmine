@@ -14,7 +14,8 @@ export default (req: any, res: any, next: any) => {
         const decodedUser = verify(token, "SomeRandomText");
         req.user = decodedUser;
 
-    } catch (error) {
+    } 
+    catch (error) {
         console.log("ppp"+token);
         res.status(HTTP_UNAUTHORIZED).send('please check');
     }
