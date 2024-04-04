@@ -6,7 +6,9 @@ import cors from 'cors'
 import foodRouter from './src/router/food-router'
 import userRouter from './src/router/user-router'
 import orderRouter from './src/router/order-router'
-import {dbConnect} from './src/configs/database.config'
+import {dbConnect} from './src/configs/database.config';
+dotenv.config();
+
 dbConnect()
 
 const app = express();
@@ -15,8 +17,8 @@ app.use(express.json());
 //connect frontend 
 app.use(cors({
     credentials:true,
-    origin:["https://foodmine-seven.vercel.app"]
-    // origin:["http://localhost:4200"]
+    // origin:["https://foodmine-seven.vercel.app"]
+    origin:["http://localhost:4200"]
 }))
 
 //foods Router couple of Api    

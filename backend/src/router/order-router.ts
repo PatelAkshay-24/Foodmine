@@ -8,6 +8,8 @@ import auth from '../middlewares/auth.mid';
 const router = Router();
 router.use(auth);
 
+
+
 router.post('/create',
 asyncHandler(async (req:any, res:any) => {
     const requestOrder = req.body;
@@ -50,10 +52,26 @@ router.post('/pay', asyncHandler( async (req:any, res) => {
     res.send(order._id);
 }))
 
+
+
+
+router.get('/', asyncHandler( async (req:any, res) => {
+
+    res.send("hii everyone");
+    
+}))
+
+
+
 router.get('/track/:id', asyncHandler( async (req, res) => {
     const order = await OrderModel.findById(req.params.id);
+    // console.log(order);
+
+    
     res.send(order);
-}))
+
+    // res.send(req.params.id);
+})) 
 
 export default router;
 

@@ -1,5 +1,5 @@
-const BASE_URL = "https://foodmine-server.vercel.app"
-// const BASE_URL = "http://localhost:5000"
+// const BASE_URL = "https://foodmine-server.vercel.app"
+const BASE_URL = "http://localhost:5000"
 
 //Food Page Api url
 export const FOOD_URL = BASE_URL + '/api/foods';
@@ -17,3 +17,5 @@ export const USER_REGISTER_URL = BASE_URL + '/api/users/register'
 export const ORDER_URL = BASE_URL + '/api/orders'
 export const ORDER_CREATE_URL = BASE_URL + '/api/orders/create'
 export const ORDER_NEW_FOR_CREATE_USER_URL = BASE_URL + '/api/orders/newOrderForCurrentUser'
+export const ORDER_PAY_URL = BASE_URL + '/api/orders/pay'
+export const ORDER_TRACK_URL = BASE_URL + 'api/orders/track/'
